@@ -4,7 +4,13 @@
 
 {% block content %}
     <h1 class="text-center">Detalhes do Produto</h1>
-    
+
+    {% if produto.imagem %}
+        <div class="text-center mt-4">
+            <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" class="img-fluid rounded" style="max-height: 300px;">
+        </div>
+    {% endif %}
+
     <table class="table table-bordered mt-4">
         <thead class="table-dark">
             <tr>
@@ -21,4 +27,9 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="mt-3">
+        <h5>Descrição:</h5>
+        <p>{{ produto.descricao }}</p>
+    </div>
 {% endblock %}

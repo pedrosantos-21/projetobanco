@@ -1,0 +1,11 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Produto Não Encontrado{% endblock %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1>Produto Não Encontrado</h1>
+    <p>Esse produto ainda não existe ou foi removido. Por favor, aguarde um momento ou volte mais tarde!</p>
+    <a href="{% url 'index' %}" class="btn btn-primary mt-3">Voltar para a Página Inicial</a>
+</div>
+{% endblock %} 

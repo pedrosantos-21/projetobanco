@@ -5,6 +5,7 @@ class Produto(models.Model):
     preco = models.DecimalField('Preço', max_digits=6, decimal_places=2)
     estoque = models.IntegerField("Quantidade em estoque")
     descricao = models.TextField()
+    imagem = models.ImageField(upload_to='produtos/', null=True, blank=True)  # <- NOVO
 
     def __str__(self):
         return f'{self.nome}'
@@ -20,3 +21,39 @@ class Client(models.Model):
     
     def __str__(self):
         return f'{self.nome} {self.sobre_nome} {self.cpf}'
+    
+
+class Categoria(models.Model):
+    nome = models.CharField(max_length=100)
+    descricao = models.TextField("Descrição", blank=True, null=True)
+
+    def __str__(self):
+        return self.nome
+
+class Pedido(models.Model):
+    cliente = models.ForeignKey(Client, on_delete=models.CASCADE)
+    data_pedido = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Pedido {self.id} - {self.cliente.nome}'
+
+class ItemPedido(models.Model):
+    pedido = models.ForeignKey(Pedido, related_name='itens', on_delete=models.CASCADE)
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    quantidade = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f'{self.quantidade} x {self.produto.nome}'
+
+class Avaliacao(models.Model):
+    cliente = models.ForeignKey(Client, on_delete=models.CASCADE)
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    comentario = models.TextField()
+    nota = models.IntegerField()
+    data = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Avaliação de {self.cliente.nome} - Nota {self.nota}'
+
+    
+    
