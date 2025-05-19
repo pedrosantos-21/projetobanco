@@ -1,0 +1,29 @@
+<h1>Avaliações</h1>
+
+<form method="GET" action="{% url 'listar_avaliacoes' %}">
+    <input type="text" name="q" placeholder="Pesquisar avaliações..." value="{{ request.GET.q }}">
+    <button type="submit">Pesquisar</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Produto</th>
+            <th>Nota</th>
+            <th>Comentário</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for avaliacao in avaliacoes %}
+        <tr>
+            <td>{{ avaliacao.id }}</td>
+            <td>{{ avaliacao.cliente.nome }}</td>
+            <td>{{ avaliacao.produto.nome }}</td>
+            <td>{{ avaliacao.nota }}</td>
+            <td>{{ avaliacao.comentario }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

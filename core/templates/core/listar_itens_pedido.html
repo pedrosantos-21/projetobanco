@@ -1,0 +1,21 @@
+<h1>Itens do Pedido</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Pedido</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in itens %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.pedido.id }}</td>
+            <td>{{ item.produto.nome }}</td>
+            <td>{{ item.quantidade }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

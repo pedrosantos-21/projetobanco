@@ -1,0 +1,19 @@
+<h1>Lista de Pedidos</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Data do Pedido</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pedido in pedidos %}
+        <tr>
+            <td>{{ pedido.id }}</td>
+            <td>{{ pedido.cliente.nome }}</td>
+            <td>{{ pedido.data_pedido }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

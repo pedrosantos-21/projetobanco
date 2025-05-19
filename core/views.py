@@ -5,6 +5,8 @@ from .forms import RegistroForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
+from django.db import models
+from core.models import Pedido, ItemPedido, Avaliacao
 
 
 
@@ -61,3 +63,25 @@ def logar_usuario(request):
 def deslogar_usuario(request):
     logout(request)
     return redirect('index')
+
+def listar_pedidos(request):
+    # Consulta otimizada com select_related para buscar os clientes relacionados
+    pedidos = Pedido.objects.com_cliente()
+    return render(request, 'core/listar_pedidos.html', {'pedidos': pedidos})
+
+def listar_itens_pedido(request):
+    # Consulta otimizada com select_related para buscar pedidos e produtos relacionados
+    itens = ItemPedido.objects.com_relacionados()
+    return render(request, 'core/listar_itens_pedido.html', {'itens': itens})
+
+def listar_avaliacoes(request):
+    query = request.GET.get('q')  # Obtém o termo de pesquisa do formulário
+    if query:
+        # Filtra as avaliações pelo nome do cliente ou do produto
+        avaliacoes = Avaliacao.objects.com_relacionados().filter(
+            models.Q(cliente__nome__icontains=query) | models.Q(produto__nome__icontains=query)
+        )
+    else:
+        # Retorna todas as avaliações se não houver pesquisa
+        avaliacoes = Avaliacao.objects.com_relacionados()
+    return render(request, 'core/listar_avaliacoes.html', {'avaliacoes': avaliacoes})
