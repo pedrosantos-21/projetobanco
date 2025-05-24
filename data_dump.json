@@ -1,0 +1,340 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-03-01T14:32:54.895Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Thiago jeferson 1230456789",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-03-01T14:34:31.911Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Mauricio josÚ 7098812007",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-03-01T14:37:03.907Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "playstation 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-03-01T14:37:37.605Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "playstation 5",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descricao\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-03-01T14:38:28.080Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Nintendo swicht",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-03-01T14:42:21.277Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Yasmin Ribeiro Oliveira 24457869120",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-04-18T21:13:13.552Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "playstation 5",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Imagem\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-04-21T12:35:46.490Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Pedido 1 - Yasmin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-04-21T12:36:24.772Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "1 x playstation 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-04-21T12:36:34.576Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "1 x playstation 5",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-05-20T00:43:40.783Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "3 x playstation 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-05-20T00:45:34.104Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "matheus santos 24457869120",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-05-20T00:57:04.789Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "2 x playstation 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$npCaliRjESoIBRAMfUH2JQ$+r7zVMq/R0W1ECDBhpUavFThW7kHc1O760SaaibVKmY=",
+    "last_login": "2025-05-20T00:43:20.615Z",
+    "is_superuser": true,
+    "username": "Pedro",
+    "first_name": "",
+    "last_name": "",
+    "email": "pedro@email.com.br",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-01T14:28:52.001Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$hRbc3E4teVImJlKCjquFPj$ihIS/JxfqvrWsmlZpOElY5Nz1SR5Nu7Eg/KjNOiruxQ=",
+    "last_login": "2025-04-21T12:38:17.530Z",
+    "is_superuser": false,
+    "username": "pedro1",
+    "first_name": "",
+    "last_name": "",
+    "email": "pedro@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-18T20:54:56.448Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7j0rn699yz4yvp97aog24iodhblro5rn",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgClKX7nsGMsyAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hZnERRpx-t4j0SHUHfMd6a5JaXZc5yl2RB-1yapye18P9OyjYy7dOTKyc95456pxo1N4ZUNkqwgjaAGuHmUB7VgRZDeystV5BxJHOgxXvD_qzN_Q:1u6qPh:Ia-em3_M85WZ_vzH7uNqVljX_Dgt_x1fHSTg3gkTcXs",
+    "expire_date": "2025-05-05T12:38:17.537Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ivfythfuy60pu9x0pr1m3tnf0pz7htqx",
+  "fields": {
+    "session_data": ".eJxVjDsOAiEUAO9CbQgf-VnaewbyeA9k1UCy7FbGuxuSLbSdmcybRdi3GveR17gQuzDJTr8sAT5zm4Ie0O6dY2_buiQ-E37YwW-d8ut6tH-DCqPOrciEgNpJqcBiMeRc8uTORZfgjASJApVSORQBxmOQFtAbIo3WF2HY5wvzHTgs:1toNrk:j7iPVDbraRQNzOT7NVXtd4YxF0Q_6A4-9wXBu0y9wy8",
+    "expire_date": "2025-03-15T14:30:56.605Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j3bjmjy827iu31b6zv4ozh3hvz550ksm",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmO499S0ucM1q4_OIBsKU4qxN1JpBTQzsx7b-ZxW4vfelr8HNmVDezyywjDM9VDxAfWe-Oh1XWZiR8JP23nU4vpdTvbv4OCvexrHaUiBJEFAI5GB2GiIClUSDASWbIyOxDODcEaIo0JdiCTgjEqB5l9vtrHN7Q:1uHB4i:72Q6QgufwONXcF14olRd6xzfUxm9VE_GDiDc9sLTcfo",
+    "expire_date": "2025-06-03T00:43:20.631Z"
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 1,
+  "fields": {
+    "nome": "playstation 5",
+    "preco": "3600.50",
+    "estoque": 8,
+    "descricao": "Video game",
+    "imagem": "produtos/baixados.jpg"
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 2,
+  "fields": {
+    "nome": "Nintendo swicht",
+    "preco": "1700.50",
+    "estoque": 90,
+    "descricao": "Video game",
+    "imagem": ""
+  }
+},
+{
+  "model": "core.client",
+  "pk": 1,
+  "fields": {
+    "nome": "Thiago",
+    "sobre_nome": "jeferson",
+    "email": "jerfeson@email.com.br",
+    "cpf": "1230456789",
+    "data_nascimento": "2005-02-19",
+    "endereco": "rua da alegria",
+    "telefone": "809876543"
+  }
+},
+{
+  "model": "core.client",
+  "pk": 2,
+  "fields": {
+    "nome": "Mauricio",
+    "sobre_nome": "josÚ",
+    "email": "ze@maumau.com.br",
+    "cpf": "7098812007",
+    "data_nascimento": "2002-03-01",
+    "endereco": "rua da paz",
+    "telefone": "1234656789"
+  }
+},
+{
+  "model": "core.client",
+  "pk": 3,
+  "fields": {
+    "nome": "Yasmin",
+    "sobre_nome": "Ribeiro Oliveira",
+    "email": "yasminr@ibeirooliv.com.br",
+    "cpf": "24457869120",
+    "data_nascimento": "2000-09-19",
+    "endereco": "Rua Sandoval Arroxelas n░52",
+    "telefone": "984635458"
+  }
+},
+{
+  "model": "core.client",
+  "pk": 4,
+  "fields": {
+    "nome": "matheus",
+    "sobre_nome": "santos",
+    "email": "santos.mat@gmail.com",
+    "cpf": "24457869120",
+    "data_nascimento": "2002-03-01",
+    "endereco": "Rua da gl¾ria",
+    "telefone": "81985632211"
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 1,
+  "fields": {
+    "cliente": 3,
+    "data_pedido": "2025-04-21T12:35:46.486Z"
+  }
+},
+{
+  "model": "core.itempedido",
+  "pk": 1,
+  "fields": {
+    "pedido": 1,
+    "produto": 1,
+    "quantidade": 1
+  }
+},
+{
+  "model": "core.itempedido",
+  "pk": 2,
+  "fields": {
+    "pedido": 1,
+    "produto": 1,
+    "quantidade": 3
+  }
+},
+{
+  "model": "core.itempedido",
+  "pk": 3,
+  "fields": {
+    "pedido": 1,
+    "produto": 1,
+    "quantidade": 2
+  }
+}
+]

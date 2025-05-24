@@ -1,0 +1,67 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Meu Carrinho - Django Loja{% endblock %}
+
+{% block content %}
+    <h1 class="text-center my-4">Meu Carrinho</h1>
+
+    {# Mensagens de feedback (sucesso, aviso, erro) com classes Bootstrap #}
+    {% if messages %}
+        <div class="mt-3">
+            {% for message in messages %}
+                <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'warning' %}alert-warning{% elif message.tags == 'error' %}alert-danger{% else %}alert-info{% endif %}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if itens_carrinho %}
+        <div class="table-responsive mt-4">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço Unitário</th>
+                        <th>Quantidade</th>
+                        <th>Subtotal</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in itens_carrinho %}
+                    <tr>
+                        <td>{{ item.produto.nome }}</td>
+                        <td>R$ {{ item.produto.preco|floatformat:2 }}</td>
+                        <td>{{ item.quantidade }}</td>
+                        <td>R$ {{ item.subtotal|floatformat:2 }}</td>
+                        <td>
+                            <a href="{% url 'remover_do_carrinho' item.produto.id %}" class="btn btn-sm btn-danger">Remover</a>
+                            {# Futuramente, aqui você poderia adicionar um formulário para alterar a quantidade #}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot class="table-light">
+                    <tr>
+                        <td colspan="3" class="text-end fw-bold">Total do Carrinho:</td>
+                        <td class="fw-bold">R$ {{ total_carrinho|floatformat:2 }}</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="{% url 'index' %}" class="btn btn-secondary">Continuar Comprando</a>
+            <button class="btn btn-success">Finalizar Compra (Próxima etapa)</button>
+            {# A URL para finalizar compra será adicionada depois #}
+        </div>
+    {% else %}
+        <div class="alert alert-info mt-4" role="alert">
+            Seu carrinho está vazio.
+        </div>
+        <p><a href="{% url 'index' %}" class="btn btn-primary">Começar a Comprar</a></p>
+    {% endif %}
+
+{% endblock %}
